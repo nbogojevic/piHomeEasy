@@ -17,7 +17,7 @@ More information about protocol can be found at:
 
 ### Software
 
-- wiringPi library is necessery for running the tool. You can install it using:
+The [wiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/) library is necessery for building and running the tool. You can install it using:
 
 ```bash
 cd ~
