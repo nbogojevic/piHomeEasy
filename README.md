@@ -13,17 +13,19 @@ More information about protocol can be found at:
 
 - Raspberry PI (A or B)
 - FS1000A 433MHz Wireless Transmitter Module for Arduino. Module can be found on ebay or various on-line electronics store. There are versions with mounted pins for Dupont cables and those were you need to solder cable. Make your choice, I prefer those with mounted pins.
-- Dupont wire cable (3 wires) 
+- Dupont female-to-female wire cable (3 wires) 
 
 ### Software
 
 - wiringPi library is necessery for running the tool. You can install it using:
-    
-    cd ~
-	  sudo apt-get install git-core
-    git clone git://git.drogon.net/wiringPi
-    cd wiringPi
-    sudo ./build
+
+```bash
+cd ~
+sudo apt-get install git-core
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+sudo ./build
+```
 
 ## Building hardware interface
 Follow these instructions on your own risk.
@@ -42,9 +44,9 @@ Follow these instructions on your own risk.
 - Install wiringPi library as described.
 - Run `g++ piHomeEasy.cpp -o piHomeEasy -lwiringPi`
 
-Tool can be built by running `./build.sh` inside project directory.
+Tool can be built by running `sudo ./build.sh` inside project directory.
 
-Tool can be installed into `/usr/local/bin` by running `./install.sh` inside project directory.
+Tool can be installed into `/usr/local/bin` by running `sudo ./install.sh` inside project directory.
 
 ## Running the tool
 
@@ -52,7 +54,7 @@ To obtain help run:
 
 	$ piHomeEasy
   
- The help is as follows:
+The help is as follows:
  
     Usage: piHomeEasy <pin number> <emitter id> <receiver id> <on|off>
 
@@ -79,33 +81,35 @@ To obtain help run:
                       on  to turn on
                       off to turn off
 
+To control devices, as tool accesses hardware, it needs to be run as root. 
+
 ### Associating the devices
 
-Each device has to be associated with Raspberry PI. Start your device in pairing mode and use tool to send on command (for example `piHomeEasy 0 31415 1 on`). Your device will be paired with emitter and receiver ids that you used (31415 and 1 in our example).
+Each device has to be associated with Raspberry PI. Start your device in pairing mode and use tool to send on command (for example `sudo piHomeEasy 0 31415 1 on`). Your device will be paired with emitter and receiver ids that you used (31415 and 1 in our example).
 
-Note the ids you used, as you will need them to control or unpair the device. To unpair the device, follow the instructions for device. Usually you need to start device in pairing mode and send off command. Use same ids that you used when pairing (in the above example, it would be `piHomeEasy 0 31415 1 off`). 
+Note the ids you used, as you will need them to control or unpair the device. To unpair the device, follow the instructions for device. Usually you need to start device in pairing mode and send off command. Use same ids that you used when pairing (in the above example, it would be `sudo piHomeEasy 0 31415 1 off`). 
 
 ### Control devices
 
 Device is controlled using ids that have been used to pair the device.
 
-To switch on use:
+To switch the device **on** use:
     
-    piHomeEasy 0 31415 1 on 
+    $ sudo piHomeEasy 0 31415 1 on 
 
-To switch off use:
+To switch the device **off** use:
     
-    piHomeEasy 0 31415 1 off 
+    $ sudo piHomeEasy 0 31415 1 off 
     
 If you associated several devices with same emitter id, you can control all of them by passing -1 instead of receiver ids. This is called group command.
 
-To switch on all devices in group, use:
+To switch **on** all devices in group, use:
     
-    piHomeEasy 0 31415 -1 on 
+    $ sudo piHomeEasy 0 31415 -1 on 
 
-To switch off all devices in group, use:
+To switch **off** all devices in group, use:
     
-    piHomeEasy 0 31415 -1 off 
+    $ sudo piHomeEasy 0 31415 -1 off 
 
 When switched on or off as group, devices can still be be controlled individually. Group command is equivalent of broadcast.
  
