@@ -17,11 +17,11 @@ More information about protocol can be found at:
 
 ### Software
 
-- wiringPi library is necessery for running the tool. You can install it using:
+The [wiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/) library is necessery for building and running the tool. You can install it using:
     
     cd ~
-	  sudo apt-get install git-core
-    git clone git://git.drogon.net/wiringPi
+    sudo apt-get install git-core
+    git clone git://git.drogon.net/wiringPi 
     cd wiringPi
     sudo ./build
 
@@ -114,3 +114,9 @@ When switched on or off as group, devices can still be be controlled individuall
 Range of transmitter module without antenna is couple of meters. With antenna it can be up to 30m in the open. Antenna should be 17.3 cm long and soldered to ANT contact.
 
 Range can be improved by powering module with larger voltage (module is usally capable of handling up to 12V). It can be external power source or possibly 5V source from Raspberry PI (**not tested**).
+
+## Thanks
+
+- [idleman](http://blog.idleman.fr) for excelent tutorials in french 
+- Arduino community for original [code and analysis](http://playground.arduino.cc/Code/HomeEasy)
+

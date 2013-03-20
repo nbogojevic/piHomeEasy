@@ -7,8 +7,9 @@
 #include <sched.h>
 #include <sstream>
 
-// Portions made by http://playground.arduino.cc/Code/HomeEasy
-// Portions made by idleman@idleman.fr (idleman@idleman.fr - http://blog.idleman.fr)
+// Code derived from:
+//  http://playground.arduino.cc/Code/HomeEasy
+//  idleman@idleman.fr (idleman@idleman.fr - http://blog.idleman.fr)
 
 using namespace std;
 
