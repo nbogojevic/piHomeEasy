@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <sched.h>
 #include <sstream>
+#include <unistd.h>
 
 // Code derived from:
 //  http://playground.arduino.cc/Code/HomeEasy
