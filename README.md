@@ -11,7 +11,7 @@ More information about protocol can be found at:
 
 ### Hardware
 
-- Raspberry PI (A or B)
+- Raspberry PI (A or B) and Raspberry Pi 2 Model B
 - FS1000A 433MHz Wireless Transmitter Module for Arduino. Module can be found on ebay or various on-line electronics store. There are versions with mounted pins for Dupont cables and those were you need to solder cable. Make your choice, I prefer those with mounted pins.
 - Dupont female-to-female wire cable (3 wires) 
 
@@ -38,15 +38,12 @@ Follow these instructions on your own risk.
 - That's it, you can now plug in the cables into Raspberry PI and start it.
 
 
-## Building the tool
+## Build and Install the tool
 
-- Get source code from GitHub. 
 - Install wiringPi library as described.
-- Run `g++ piHomeEasy.cpp -o piHomeEasy -lwiringPi`
-
-Tool can be built by running `sudo ./build.sh` inside project directory.
-
-Tool can be installed into `/usr/local/bin` by running `sudo ./install.sh` inside project directory.
+- Get *piHomeEasy* source code from GitHub and move inside the project directory.
+- To build the tool run: `make`
+- To install the tool into */usr/local/bin* run:`sudo make install`
 
 ## Running the tool
 
