@@ -1,4 +1,4 @@
-#Control HomeEasy/Chacon/Byebyestandby devices
+# Control HomeEasy/Chacon/Byebyestandby devices
 
 This tool can switch on and off the remote-controlled plugs using HomeEasy protocol.
 
@@ -7,7 +7,7 @@ More information about protocol can be found at:
 - http://playground.arduino.cc/Code/HomeEasy
 - http://blog.idleman.fr/?p=1970
 
-##Prerequisites
+## Prerequisites
 
 ### Hardware
 
