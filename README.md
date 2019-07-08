@@ -98,7 +98,7 @@ To switch the device **off** use:
     
     $ sudo piHomeEasy 0 31415 1 off 
     
-If you associated several devices with same emitter id, you can control all of them by passing -1 instead of receiver ids. This is called group command.
+If you associated several devices with the same emitter id, you can control all of them by passing -1 instead of receiver ids. This is called the group command.
 
 To switch **on** all devices in group, use:
     
@@ -108,7 +108,7 @@ To switch **off** all devices in group, use:
     
     $ sudo piHomeEasy 0 31415 -1 off 
 
-When switched on or off as group, devices can still be be controlled individually. Group command is equivalent of broadcast.
+When switched on or off as a group, devices can still be be controlled individually. Group command is equivalent of a broadcast.
  
 ## Device range
 
